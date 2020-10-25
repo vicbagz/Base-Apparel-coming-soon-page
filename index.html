@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script>
+    function validate(){
+        var text = document.getElementById("text1").value;
+        var rgxp = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,10})(.[a-z]{1,6})$/ ;
+        if ( rgxp.test(text) ) {
+            document.getElementById("lbltext").innerHTML = "Valid"
+            document.getElementById("lbltext").style.visibility = "visible"                
+            document.getElementById("lbltext").style.color = "green"
+        }
+        else {
+            document.getElementById("text1").style.border = "2px solid red"
+            document.getElementById("lbltext").innerHTML = "Please provide a valid email"
+            document.getElementById("lbltext").style.visibility = "visible"
+            document.getElementById("lbltext").style.color = "hsl(0, 93%, 68%)"
+            document.getElementById("exlamation").style.visibility = "visible"
+        }
+    }
+</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div class="img_container">
+      <img src="images/hero-desktop.jpg" alt="" />
+      <div class="mobile_image">
+      <img  src="/images/hero-mobile.jpg" alt=""></div>
+    </div>
+    
+    <div class="base_apparel"><div class="ring"></div>base <br> apparel</div>
+    <main class="heading">
+      we're <span class="next_line"> coming <span> soon </span>
+    </main>
+    <div class="sub_heading">
+      Hello fellow shoppers! We're currently building our new <span> fashion store. 
+  Add your email below to stay up-to-date with <span> announcements and our launch deals.
+    </div>
+    <form action="#" novalidate onsubmit="return validation()">
+    <div class="email">
+      <input id="text1" type="email" placeholder="Email Address" required>
+      <label id="lbltext" style="color: red; visibility: hidden;" ></label>
+      <i class="fa fa-exclamation-circle" style="visibility: hidden;"  id="exlamation" aria-hidden="true"></i>
+      <button type="submit" onclick="validate()">
+        <i class="fa fa-angle-right"  aria-hidden="true"></i>
+      </button>
+    </div>
+  </form>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a target="_blank" href="https://twitter.com/JeetViramgama">Jeet Viramgama</a>.
+    </p>
+  </footer>
+  
+  </body>
+</html>
+
+<!-- 
+
+We're coming soon
+
+  Hello fellow shoppers! We're currently building our new fashion store. 
+  Add your email below to stay up-to-date with announcements and our launch deals.
+
+  Email Address -->
